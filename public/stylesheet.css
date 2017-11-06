@@ -1,0 +1,107 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    width: auto;
+    height: 100vh;
+    background-image: radial-gradient(
+        ellipse farthest-corner at 45px 45px,
+        #a8a8a1 0%,
+        rgba(0, 0, 255, 0) 50%,
+        #a32637 95%
+    );
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+/* body {
+    width: 100vh;
+    height: 100vh;
+    background-image: radial-gradient(ellipse farthest-corner at 45px 45px , #00FFFF 0%, rgba(0, 0, 255, 0) 50%, #0000FF 95%);
+  } */
+.jumbotron-fluid {
+    color: #a32637;
+    margin-bottom: 0px;
+}
+
+div.jumbotron.jumbotron-fluid {
+    border-radius: 6px 6px 0 0;
+    border: 1px solid #332c2f;
+}
+
+#grad {
+    background: #a8a8a1; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(
+        left,
+        #a8a8a1,
+        #a8a8a1,
+        #a8a8a1,
+        #a32637
+    ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(
+        right,
+        #a8a8a1,
+        #a8a8a1,
+        #a8a8a1,
+        #a32637
+    ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(
+        right,
+        #a8a8a1,
+        #a8a8a1,
+        #a8a8a1,
+        #a32637
+    ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(
+        to right,
+        #a8a8a1,
+        #a8a8a1,
+        #a8a8a1,
+        #a32637
+    ); /* Standard syntax */
+}
+
+.navbar {
+    border-radius: 0 0 6px 6px;
+}
+
+.portfolio-text {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.jumbotron > h1 {
+    font-family: 'Rock Salt', cursive;
+}
+
+.navbar-brand {
+    font-size: 150%;
+}
+a.nav-item.nav-link {
+    padding: 15px;
+    margin-right: 25px;
+    font-size: 150%;
+}
+/* .nav-pills {
+    border: 5px solid black;
+} */
+/* li.nav-item {
+    border: 5px solid black;
+    border-bottom: 0;
+} */
+li > a.nav-link {
+    font-size: 110%;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .nav-item.show .nav-link {
+    color: #fff;
+    cursor: default;
+    background-color: #a32637;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #a32637;
+}
