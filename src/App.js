@@ -2,100 +2,154 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+//function NavBar() {}
+const NavBar = () => (
+    <div>
+        <p>Hello</p>
+    </div>
+);
+
+const Row = props => (
+    <div id={props.id} className={'row ' + props.className}>
+        {props.children}
+    </div>
+);
+
+const example = (
+    <Row className="my-custom-class" id={1}>
+        <p> Hello World </p>
+    </Row>
+);
+
+const Counter = props => (
+    <div>
+        <button onClick={() => props.onPlus()}>+</button>
+        <h3>{props.count}</h3>
+        <button onClick={() => props.onMinus()}>-</button>
+    </div>
+);
+
+const counterExample = (
+    <Counter
+        count={3}
+        onPlus={() => console.log('adding!')}
+        onMinus={() => console.log('subtracting!!!')}
+    />
+);
+const HeaderBootStrap3 = () => (
+    // <!-- Bootstrap 3 NavBar -->
+    <div className="container">
+        <nav className="navbar navbar-inverse">
+            <div className="container-fluid">
+                <div className="navbar-header">
+                    <a
+                        className="navbar-brand"
+                        href="https://docs.google.com/a/basecampcodingacademy.org/document/d/1_h_e7eS3UIjBmZ0pV1QCCs1349uV3nOvnCT-L-5sKA0/edit?usp=sharing"
+                        target="__blank"
+                    >
+                        Shedlia's Resume
+                    </a>
+                </div>
+                <ul className="nav navbar-nav">
+                    <li className="active">
+                        <a href="index.html">About Me</a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://github.com/Sfreeman99"
+                            target="__blank"
+                        >
+                            <i
+                                className="fa fa-github-alt"
+                                aria-hidden="true"
+                            />{' '}
+                            Git Hub
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.linkedin.com/in/shedlia-freeman-265609149/"
+                            target="__blank"
+                        >
+                            <i
+                                className="fa fa-linkedin-square"
+                                aria-hidden="true"
+                            />{' '}
+                            Linkedin
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    // <!-- BootStrap 3 NavBar end -->
+);
+const HeaderBootStrap4 = () => (
+    <div className="container">
+        <div className="jumbotron jumbotron-fluid" id="grad">
+            <h1 className="display-5">Shedlia Freeman</h1>
+            <p className="lead">Student at Base Camp Coding Academy.</p>
+        </div>
+        {/* <!-- Bootstrap 4 NavBar --> */}
+        <nav className="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+            <button
+                className="navbar-toggler navbar-toggler-right"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span className="navbar-toggler-icon" />
+            </button>
+            <a
+                className="navbar-brand"
+                href="https://docs.google.com/a/basecampcodingacademy.org/document/d/1_h_e7eS3UIjBmZ0pV1QCCs1349uV3nOvnCT-L-5sKA0/edit?usp=sharing"
+                target="__blank"
+            >
+                Shedlia's Resume
+            </a>
+            <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div className="navbar-nav">
+                    <a className="nav-item nav-link active" href="index.html">
+                        About Me
+                        <span className="sr-only" />
+                    </a>
+                    <a
+                        className="nav-item nav-link"
+                        href="https://github.com/Sfreeman99"
+                        target="__blank"
+                    >
+                        <i
+                            className="fa fa-github-alt"
+                            aria-hidden="true"
+                        />{' '}
+                        Git Hub
+                    </a>
+                    <a
+                        className="nav-item nav-link"
+                        href="https://www.linkedin.com/in/shedlia-freeman-265609149/"
+                        target="__blank"
+                    >
+                        <i
+                            className="fa fa-linkedin-square"
+                            aria-hidden="true"
+                        />{' '}
+                        Linkedin
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+);
 class App extends Component {
     render() {
         return (
             <div className="container-fluid">
-                <div className="container">
-                    <div className="jumbotron jumbotron-fluid" id="grad">
-                        <h1 className="display-5">Shedlia Freeman</h1>
-                        <p className="lead">
-                            Student at Base Camp Coding Academy.
-                        </p>
-                    </div>
-                    {/* <!-- Bootstrap 4 NavBar --> */}
-                    <nav className="navbar navbar-toggleable-md navbar-inverse bg-inverse">
-                        <button
-                            className="navbar-toggler navbar-toggler-right"
-                            type="button"
-                            data-toggle="collapse"
-                            data-target="#navbarNavAltMarkup"
-                            aria-controls="navbarNavAltMarkup"
-                            aria-expanded="false"
-                            aria-label="Toggle navigation"
-                        >
-                            <span className="navbar-toggler-icon" />
-                        </button>
-                        <a
-                            className="navbar-brand"
-                            href="https://docs.google.com/a/basecampcodingacademy.org/document/d/1_h_e7eS3UIjBmZ0pV1QCCs1349uV3nOvnCT-L-5sKA0/edit?usp=sharing"
-                            target="__blank"
-                        >
-                            Shedlia's Resume
-                        </a>
-                        <div
-                            className="collapse navbar-collapse"
-                            id="navbarNavAltMarkup"
-                        >
-                            <div className="navbar-nav">
-                                <a
-                                    className="nav-item nav-link active"
-                                    href="index.html"
-                                >
-                                    About Me
-                                    <span className="sr-only" />
-                                </a>
-                                <a
-                                    className="nav-item nav-link"
-                                    href="https://github.com/Sfreeman99"
-                                    target="__blank"
-                                >
-                                    <i
-                                        className="fa fa-github-alt"
-                                        aria-hidden="true"
-                                    />{' '}
-                                    Git Hub
-                                </a>
-                                <a
-                                    className="nav-item nav-link"
-                                    href="https://www.linkedin.com/in/shedlia-freeman-265609149/"
-                                    target="__blank"
-                                >
-                                    <i
-                                        className="fa fa-linkedin-square"
-                                        aria-hidden="true"
-                                    />{' '}
-                                    Linkedin
-                                </a>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-                {/* <!-- Bootstrap 4 NavBar End -->
-        <!-- Bootstrap 3 NavBar --> */}
-                {/* <!-- <div className='container'>
-            <nav className="navbar navbar-inverse">
-                <div className="container-fluid">
-                    <div className="navbar-header">
-                        <a className="navbar-brand" href="https://docs.google.com/a/basecampcodingacademy.org/document/d/1_h_e7eS3UIjBmZ0pV1QCCs1349uV3nOvnCT-L-5sKA0/edit?usp=sharing"
-                            target="__blank">Shedlia's Resume</a>
-                    </div>
-                    <ul className="nav navbar-nav">
-            <li className="active">
-                <a href="index.html">About Me</a>
-            </li>
-            <li>
-                <a href="https://github.com/Sfreeman99" target='__blank'>
-                    <i className="fa fa-github-alt" aria-hidden="true"></i> Git Hub</a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/shedlia-freeman-265609149/" target='__blank'>
-                    <i className="fa fa-linkedin-square" aria-hidden="true"></i> Linkedin</a>
-            </li>
-            </ul>
-        </div>
-        </nav> -->
-        <!-- BootStrap 3 NavBar end --> */}
+                <HeaderBootStrap4 />
+                {/* <!-- Bootstrap 4 NavBar End --> */}
+
                 <div className="container">
                     <div className="row">
                         <div className="col-xl-4 col-lg-4 col-md-auto col-sm-auto">
@@ -108,6 +162,7 @@ class App extends Component {
                                         My name is Shedlia Freeman. I have grown
                                         up in Water Valley, Ms for mostly all of
                                         my life. I am a current student at
+                                        &nbsp;
                                         <a
                                             href="http://www.basecampcodingacademy.org"
                                             target="__blank"
@@ -172,7 +227,11 @@ class App extends Component {
                                         <i className="icon-python" />
                                     </a>
                                 </li>
-                                {/* <!-- <li><a data-toggle="pill" href="#menu5">Record Keeper</a></li> --> */}
+                                <li>
+                                    <a data-toggle="pill" href="#menu5">
+                                        Record Keeper
+                                    </a>
+                                </li>
                                 <li className="nav-item dropdown">
                                     <a
                                         className="nav-link dropdown-toggle"
