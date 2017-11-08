@@ -105,3 +105,8 @@ li > a.nav-link {
     text-decoration: none;
     background-color: #a32637;
 }
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 15px 10px 15px 10px;
+}

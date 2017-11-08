@@ -1,20 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-
-//function NavBar() {}
-
-const Row = props => (
-    <div id={props.id} className={'row ' + props.className}>
-        {props.children}
-    </div>
-);
-
-const example = (
-    <Row className="my-custom-class" id={1}>
-        <p> Hello World </p>
-    </Row>
-);
 
 const Counter = props => (
     <div>
@@ -200,7 +185,6 @@ const NavPillTabs = () => (
             <a
                 className="nav-link dropdown-toggle"
                 data-toggle="dropdown"
-                href="#"
                 role="button"
                 aria-haspopup="true"
                 aria-expanded="false"
