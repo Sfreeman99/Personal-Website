@@ -88,6 +88,11 @@ a.nav-item.nav-link {
     border: 5px solid black;
     border-bottom: 0;
 } */
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 15px 10px 15px 10px;
+}
 li > a.nav-link {
     font-size: 110%;
 }
@@ -104,9 +109,4 @@ li > a.nav-link {
     color: #fff;
     text-decoration: none;
     background-color: #a32637;
-}
-.nav > li > a {
-    position: relative;
-    display: block;
-    padding: 15px 10px 15px 10px;
 }

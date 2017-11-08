@@ -186,6 +186,7 @@ const NavPillTabs = () => (
                 className="nav-link dropdown-toggle"
                 data-toggle="dropdown"
                 role="button"
+                href="#"
                 aria-haspopup="true"
                 aria-expanded="false"
             >
@@ -349,25 +350,43 @@ const NavPillTabsContent = () => (
         </div>
     </div>
 );
+
+const Row = props => (
+    <div className={'row ' + props.className}>{props.children}</div>
+);
+
+const Col = props => (
+    <div
+        className={['sm', 'md', 'lg']
+            .map(size => 'col-' + size + '-' + props.num)
+            .join(' ')}
+    >
+        {props.children}
+    </div>
+);
+const ContainerFluid = props => (
+    <div className="container-fluid">{props.children}</div>
+);
+const Container = props => <div className="container">{props.children}</div>;
 class App extends Component {
     render() {
         return (
-            <div className="container-fluid">
+            <ContainerFluid>
                 <HeaderBootStrap4 />
                 {/* <!-- Bootstrap 4 NavBar End --> */}
 
-                <div className="container">
-                    <div className="row">
-                        <div className="col-xl-4 col-lg-4 col-md-auto col-sm-auto">
+                <Container>
+                    <Row>
+                        <Col num="4">
                             <AboutMe />
-                        </div>
-                        <div className="col-xl-8 col-lg-8 col-md-auto col-sm-auto">
+                        </Col>
+                        <Col num="8">
                             <NavPillTabs />
                             <NavPillTabsContent />
-                        </div>
-                    </div>
-                </div>
-            </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </ContainerFluid>
         );
     }
 }
