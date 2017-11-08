@@ -1,21 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 
-const Counter = props => (
-    <div>
-        <button onClick={() => props.onPlus()}>+</button>
-        <h3>{props.count}</h3>
-        <button onClick={() => props.onMinus()}>-</button>
-    </div>
-);
-
-const counterExample = (
-    <Counter
-        count={3}
-        onPlus={() => console.log('adding!')}
-        onMinus={() => console.log('subtracting!!!')}
-    />
-);
 const HeaderBootStrap3 = () => (
     // <!-- Bootstrap 3 NavBar -->
     <div className="container">
